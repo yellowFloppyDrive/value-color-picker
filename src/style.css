@@ -1,0 +1,24 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.color-tile {
+    all: unset;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    z-index: 0;
+    cursor: pointer;
+    transform-origin: center;
+    transition: all 400ms;
+}
+
+.color-tile:hover {
+    z-index: 1;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    transform: scale(1.3);
+}
