@@ -1,5 +1,5 @@
 export function convertRgbToHex(rgb: string): undefined | string {
-    const matches = rgb.match(/rgb\((\d+), (\d+), (\d+)\)/);
+    const matches = rgb.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
 
     if (matches) {
         const r = Math.round(parseFloat(matches[1]));
