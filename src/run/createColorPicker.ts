@@ -12,11 +12,9 @@ type CreateColorPickerArgs = {
 
 export function createColorPicker(args: CreateColorPickerArgs): HTMLElement {
     const colorPicker = createElement(`
-        <div style="margin-top: 50px;">
-            <div style="display: flex; align-items: flex-start; gap: 20px; justify-content: center;">
-                <div data-component="color-grid-container"></div>
-                <div data-component="value-picker-container"></div>
-            </div>        
+        <div style="display: flex; align-items: flex-start; gap: 20px; justify-content: center;">
+            <div data-component="color-grid-container"></div>
+            <div data-component="value-picker-container"></div>
         </div>
     `);
 
