@@ -1,6 +1,13 @@
 import {triggerCopiedToClipboardNotification} from "./triggerCopiedToClipboardNotification.ts";
+import {convertRgbToHex} from "./convertRgbToHex.ts";
 
-export async function copyColorToClipboard(color: string): Promise<void> {
-    await navigator.clipboard.writeText(color);
-    triggerCopiedToClipboardNotification();
+export async function copyColorToClipboard(rgbColor: string): Promise<void> {
+    const hexColor = convertRgbToHex(rgbColor);
+
+    if (hexColor) {
+        await navigator.clipboard.writeText(hexColor);
+        triggerCopiedToClipboardNotification();
+    } else {
+        alert('Something went wrong. Could not copy color!');
+    }
 }
